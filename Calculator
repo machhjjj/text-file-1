@@ -1,0 +1,246 @@
+#include<iostream>
+#include<cstdlib>
+#include<cmath>
+#include<math.h>
+using namespace std;
+
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void factorial();
+void square();
+void power();
+void cube();
+void squareroot();
+void sinfunction();
+void cosfunction();
+void tanfunction();
+void inverseofsin();
+void inverseofcos();
+void inverseoftan();
+
+int main(){
+    
+    cout<<"Welcome to the scientific calculator, developed by KAJAL DHIMAN AND JIYA SAINI!!! "<<endl;
+    cout <<"***********Press 0 to quit the program************\n"<<endl;
+    cout <<"Enter 1 for Addition\n";
+    cout <<"Enter 2 for Subtraction\n";
+    cout <<"Enter 3 for Multiplication\n";
+    cout <<"Enter 4 for Division\n";
+    cout <<"Enter 5 for Factorial\n";
+    cout <<"Enter 6 for Square\n";
+    cout <<"Enter 7 for Power\n";
+    cout <<"Enter 8 for Cube\n";
+    cout <<"Enter 9 for Squareroot\n";
+    cout<<"ENter 10 for sin function\n";
+    cout<<"Enter 11 for cos function\n";
+    cout<<"Enter 12 for tan function\n";
+    cout<<"Enter 13 for inverse of sin\n";
+    cout<<"Enter 13 for inverse of cos\n";
+    cout<<"Enter 13 for inverse of tan\n";
+
+     int choice;
+    while(1){
+        cout<<"enter your choice:";
+    cin>>choice;
+    
+    switch(choice)
+    {
+        case 1:
+        addition();
+         break;
+         case 2:
+        subtraction();
+        break;
+         case 3:
+         multiplication();
+         break;
+          case 4:
+        division();
+         break;
+          case 5:
+        factorial();
+         break;
+          case 6:
+        square();
+         break;
+          case 7:
+        power();
+         break;
+          case 8:
+        cube();
+         break;
+          case 9:
+        squareroot();
+         break;
+         case 10:
+        sinfunction();
+         break;
+          case 11:
+        cosfunction();
+         break;
+          case 12:
+        tanfunction();
+         break;
+          case 13:
+        inverseofsin();
+         break;
+           case 14:
+        inverseofcos();
+         break;
+         case 15:
+        inverseoftan();
+         break;
+        case 0:
+        exit(0);
+        break;
+         
+        default:
+        cout<<"***********wrong choice, enter valid choice*******\n\n";
+        break;
+    }
+        
+    }
+    
+    
+  
+    
+    
+    
+    
+    return 0;
+}
+void addition(){
+    cout<<"enter the numbers you want to add:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the addition of "<<a<<"and"<<b<<"is"<<a+b<<endl;
+}
+
+void subtraction(){
+    cout<<"enter the numbers you want to subtract:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the subtraction of "<<a<<"and"<<b<<"is"<<a-b<<endl;
+}
+
+
+void multiplication(){
+    cout<<"enter the numbers you want to mutiply:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the mutiplication of "<<a<<"and"<<b<<"is"<<a*b<<endl;
+}
+
+void division(){
+    cout<<"enter the numbers you want to divide:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the division of "<<a<<"and"<<b<<"is"<<(float)a/(float)b<<endl;
+}
+
+void factorial(){
+    cout<<"enter the number you want to find factorial of:";
+    int n;
+    cin>>n;
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    cout<<"the factorial of"<<n<<"is"<<fact<<endl;
+}
+
+void square(){
+    
+    cout<<"enter the number the want to get square of:";
+    double b;
+    cin>>b;
+    double power = pow(b,2);
+    cout<<"the square of "<<b<<"is"<<power<<endl;
+   
+}
+
+
+
+void power(){
+    cout<<"enter the base and exponent:";
+    double b,e;
+    cin>>b>>e;
+    double power = pow(b,e);
+    cout<<"the solution for base "<<b<<"and exponent"<<e<<"is"<<power<<endl;
+    
+   
+}
+
+void cube(){
+    
+    cout<<"enter the number the want to get cube of:";
+    double b;
+    cin>>b;
+    double power = pow(b,3);
+    cout<<"the cube of "<<b<<"is"<<power<<endl;
+   
+}
+void squareroot(){
+    cout<<"enter the number you want the squareroot of:";
+    double n;
+    cin>>n;
+    double squareRoot = sqrt(n);
+    cout<<"the squareroot of"<<n<<"is"<<squareRoot<<endl;
+    
+}
+void sinfunction(){
+    cout<<"enter the number you want sin of ";
+    int n;
+    cin>>n;
+   
+   cout<<"Sin = "<<sin(n)<<endl; 
+
+}
+void cosfunction(){
+    cout<<"enter the number you want cos of ";
+    int n;
+    cin>>n;
+   
+   cout<<"Cos = "<<cos(n)<<endl; 
+
+}
+void tanfunction(){
+    cout<<"enter the number you want tan of ";
+    int n;
+    cin>>n;
+   
+   cout<<"Tan = "<<tan(n)<<endl; 
+
+}
+void inverseofsin(){
+       float PI;
+  
+    cout<<"enter the number you want inverse of sin ";
+    int n;
+    cin>>n;
+   
+ cout<<"Inverse of Sin = "<<asin(n)*180.0/PI<<endl; 
+
+}
+void inverseofcos(){
+       float PI;
+  
+    cout<<"enter the number you want inverse of cos ";
+    int n;
+    cin>>n;
+   
+ cout<<"Inverse of Cos = "<<acos(n)*180.0/PI<<endl; 
+
+}
+void inverseoftan(){
+    float PI;
+  
+    cout<<"enter the number you want inverse of tan ";
+    int n;
+    cin>>n;
+   
+ cout<<"Inverse of Tan = "<<atan(n)*180.0/PI<<endl; 
+
+}
